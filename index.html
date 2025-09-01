@@ -1,0 +1,76 @@
+import React from "react";
+import { motion } from "framer-motion";
+import { Mail, Youtube, Twitter, Send } from "lucide-react";
+
+const ProfileSections = () => (
+  <div className="container mx-auto px-4 py-8">
+    {/* Professional Projects */}
+    <motion.section 
+      id="projects" 
+      className="mb-12"
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true }}
+    >
+      <h2 className="text-3xl font-semibold mb-6">Professional Projects</h2>
+      <ul className="list-disc list-inside text-gray-300">
+        <li><strong>KULADAO</strong> – Led community growth initiatives and strategic development.</li>
+        <li><strong>Doex Global</strong> – Drove brand adoption and expanded user base.</li>
+        <li><strong>Mises Browser</strong> – Integrated Web3 solutions and managed outreach campaigns.</li>
+        <li><strong>Ton Meme Party</strong> – Executed community awareness and engagement programs.</li>
+        <li><strong>Victus Capital</strong> – Supported ecosystem initiatives and partnership strategies.</li>
+      </ul>
+    </motion.section>
+
+    {/* Core Skills */}
+    <motion.section 
+      id="skills" 
+      className="mb-12"
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true }}
+    >
+      <h2 className="text-3xl font-semibold mb-6">Core Skills</h2>
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-gray-300">
+        <span>Cybersecurity</span>
+        <span>Networking</span>
+        <span>Community Building</span>
+        <span>KOL Management</span>
+        <span>Content Creation</span>
+        <span>Strategic Partnerships</span>
+        <span>Web3 Growth</span>
+        <span>Ambassadorship</span>
+      </div>
+    </motion.section>
+
+    {/* Contact Information */}
+    <motion.section 
+      id="contact" 
+      className="mb-12"
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true }}
+    >
+      <h2 className="text-3xl font-semibold mb-6">Contact Information</h2>
+      <div className="flex flex-col gap-4">
+        <a href="mailto:zikkybassey@gmail.com" className="flex items-center gap-2 hover:text-blue-400">
+          <Mail size={20}/> zikkybassey@gmail.com
+        </a>
+        <a href="https://youtube.com/@novaguardd?si=V292kmUZeZnBAR6O" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-red-400">
+          <Youtube size={20}/> YouTube
+        </a>
+        <a href="https://x.com/I_Am_ZIk_?t=tnRbiz9KZ-8ZnIBCiZI0_A&s=09" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-sky-400">
+          <Twitter size={20}/> X (Twitter)
+        </a>
+        <a href="https://t.me/Zikkk10" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-blue-400">
+          <Send size={20}/> Telegram
+        </a>
+      </div>
+    </motion.section>
+  </div>
+);
+
+export default ProfileSections;
